@@ -1,5 +1,5 @@
 export class MainController {
-  constructor ($timeout, webDevTec, toastr, Assignment, $log) {
+  constructor ($timeout, webDevTec, toastr, Assignment) {
     'ngInject';
 
     this.awesomeThings = [];

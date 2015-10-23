@@ -1,0 +1,18 @@
+.create-assignment-container {
+  display:flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-assignment-container form {
+  /*flex-basis: 1;*/
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.create-assignment-container form button {
+  
+}
