@@ -4,6 +4,7 @@ export function CreateAssignment() {
     restrict: 'E',
     templateUrl: 'app/components/createAssignment/createAssignment.html',
     scope: {
+      'assignmentCreated': '&'
     },
     controller: CreateAssignmentController,
     controllerAs: 'vm',
@@ -21,13 +22,13 @@ class CreateAssignmentController {
     this.Assignment = Assignment;
   }
   create () {
-    this.$log.log(this.name, this.expectedDuration);
+    this.$log.log(this.asgn);
     this.saving = true;
-    let {name, expectedDuration} = this;
-    let newAssignment = this.Assignment.create({name, expectedDuration});
-    newAssignment.promise.then((asgn) => {
-      this.assigments.push(asgn);
-      this.saving = false;
+    let newAssignment = this.Assignment.create(this.asgn);
+    let self = this;
+    newAssignment.$promise.then((asgn) => {
+      self.assignmentCreated({asgn:asgn});
+      self.saving = false;
     });
   }
 }

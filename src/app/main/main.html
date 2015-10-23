@@ -6,21 +6,18 @@
 
   <div class="jumbotron ">
     <div class="create-assignment-container">
-      <create-assignment></create-assignment>
+      <create-assignment assignment-created="main.addAssignment(asgn)"></create-assignment>
     </div>
   </div>
 
   <div class="row">
-    <p ng-repeat="asgn in main.assignments">
-      <span>{{asgn.name}}</span>
-    </p>
-    <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
+
+    <div class="col-sm-6 col-md-4" ng-repeat="asgn in main.assignments">
       <div class="thumbnail">
-        <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
+        <!-- <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}"> -->
         <div class="caption">
-          <h3>{{ awesomeThing.title }}</h3>
-          <p>{{ awesomeThing.description }}</p>
-          <p><a ng-href="{{awesomeThing.url}}">{{ awesomeThing.url }}</a></p>
+          <h3><a href ui-sref="assignment({id:asgn.id})">{{ asgn.name }}</a></h3>
+          <p>Expected duration: {{ asgn.expectedDuration }} hours</p>
         </div>
       </div>
     </div>

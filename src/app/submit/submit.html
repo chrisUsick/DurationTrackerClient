@@ -1,0 +1,17 @@
+<div class="container">
+
+  <div>
+    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+  </div>
+  <div class="create-assignment-container">
+    <create-submission asgn-id="c.$stateParams.asgnId" submission-created="c.addSubmission(sbmn)"></create-submission>
+  </div>
+  <div>
+    <h1> My Submissions</h1>
+    <ul>
+      <li ng-repeat="sub in c.submissions">
+        {{sub.assignment.name}}: {{sub.duration}} hours.
+      </li>
+    </ul>
+  </div>
+</div>

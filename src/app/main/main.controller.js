@@ -1,36 +1,15 @@
 export class MainController {
-  constructor ($timeout, webDevTec, toastr, Assignment) {
+  constructor ($state, Assignment) {
     'ngInject';
 
-    this.awesomeThings = [];
-    this.classAnimation = '';
-    this.creationDate = 1445209108275;
-    this.toastr = toastr;
-
-    this.activate($timeout, webDevTec);
-
     this.assignments = Assignment.find();
+    this.$state = $state;
   }
 
-  activate($timeout, webDevTec) {
-    this.getWebDevTec(webDevTec);
-    $timeout(() => {
-      this.classAnimation = 'rubberBand';
-    }, 4000);
+  addAssignment(asgn) {
+    this.assignments.push(asgn);
   }
-
-  getWebDevTec(webDevTec) {
-    this.awesomeThings = webDevTec.getTec();
-
-    angular.forEach(this.awesomeThings, (awesomeThing) => {
-      awesomeThing.rank = Math.random();
-    });
+  go(asgnId) {
+    this.$state.go('assignment', {id:asgnId});
   }
-
-  showToastr() {
-    this.toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-    this.classAnimation = '';
-  }
-
-
 }

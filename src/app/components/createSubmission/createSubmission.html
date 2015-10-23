@@ -1,0 +1,20 @@
+<form novalidate>
+  <div class="form-group">
+    <label for="duration">Duration</label>
+    <input id="duration" type=number class="form-control" ng-model="c.sbmn.duration">
+  </div>
+  <div class="form-group">
+    <label for="assignment">Assignment</label>
+    <select ng-model="c.sbmn.assignmentId"
+            convert-to-number
+            ng-options="a.id as a.name for a in c.assignments "></select>
+  </div>
+  <div class="alert alert-danger" ng-show="c.error">
+    {{c.error}}
+  </div>
+  <button ng-click="c.create()" class="btn btn-primary">Create Submission</button>
+</form>
+
+<pre>
+  {{c.sbmn|json}}
+</pre>

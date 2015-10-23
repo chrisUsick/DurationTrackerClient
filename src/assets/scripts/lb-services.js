@@ -1,6 +1,6 @@
 (function(window, angular, undefined) {'use strict';
 
-var urlBase = "http://localhost:4045/api";
+var urlBase = "http://localhost:3035/api";
 var authHeader = 'authorization';
 
 /**
@@ -155,36 +155,7 @@ module.factory(
           method: "PUT"
         },
 
-        /**
-         * @ngdoc method
-         * @name lbServices.User#prototype$__findById__submissions
-         * @methodOf lbServices.User
-         *
-         * @description
-         *
-         * Find a related item by id for submissions.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - User id
-         *
-         *  - `fk` – `{*}` - Foreign key for submissions
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `User` object.)
-         * </em>
-         */
+        // INTERNAL. Use User.submissions.findById() instead.
         "prototype$__findById__submissions": {
           params: {
           'fk': '@fk'
@@ -193,33 +164,7 @@ module.factory(
           method: "GET"
         },
 
-        /**
-         * @ngdoc method
-         * @name lbServices.User#prototype$__destroyById__submissions
-         * @methodOf lbServices.User
-         *
-         * @description
-         *
-         * Delete a related item by id for submissions.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - User id
-         *
-         *  - `fk` – `{*}` - Foreign key for submissions
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
+        // INTERNAL. Use User.submissions.destroyById() instead.
         "prototype$__destroyById__submissions": {
           params: {
           'fk': '@fk'
@@ -228,40 +173,7 @@ module.factory(
           method: "DELETE"
         },
 
-        /**
-         * @ngdoc method
-         * @name lbServices.User#prototype$__updateById__submissions
-         * @methodOf lbServices.User
-         *
-         * @description
-         *
-         * Update a related item by id for submissions.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - User id
-         *
-         *  - `fk` – `{*}` - Foreign key for submissions
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `User` object.)
-         * </em>
-         */
+        // INTERNAL. Use User.submissions.updateById() instead.
         "prototype$__updateById__submissions": {
           params: {
           'fk': '@fk'
@@ -407,138 +319,26 @@ module.factory(
           method: "GET"
         },
 
-        /**
-         * @ngdoc method
-         * @name lbServices.User#prototype$__get__submissions
-         * @methodOf lbServices.User
-         *
-         * @description
-         *
-         * Queries submissions of User.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - User id
-         *
-         *  - `filter` – `{object=}` -
-         *
-         * @param {function(Array.<Object>,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Array.<Object>} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `User` object.)
-         * </em>
-         */
+        // INTERNAL. Use User.submissions() instead.
         "prototype$__get__submissions": {
           isArray: true,
           url: urlBase + "/Users/:id/submissions",
           method: "GET"
         },
 
-        /**
-         * @ngdoc method
-         * @name lbServices.User#prototype$__create__submissions
-         * @methodOf lbServices.User
-         *
-         * @description
-         *
-         * Creates a new instance in submissions of this model.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - User id
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `User` object.)
-         * </em>
-         */
+        // INTERNAL. Use User.submissions.create() instead.
         "prototype$__create__submissions": {
           url: urlBase + "/Users/:id/submissions",
           method: "POST"
         },
 
-        /**
-         * @ngdoc method
-         * @name lbServices.User#prototype$__delete__submissions
-         * @methodOf lbServices.User
-         *
-         * @description
-         *
-         * Deletes all submissions of this model.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - User id
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
+        // INTERNAL. Use User.submissions.destroyAll() instead.
         "prototype$__delete__submissions": {
           url: urlBase + "/Users/:id/submissions",
           method: "DELETE"
         },
 
-        /**
-         * @ngdoc method
-         * @name lbServices.User#prototype$__count__submissions
-         * @methodOf lbServices.User
-         *
-         * @description
-         *
-         * Counts submissions of User.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - User id
-         *
-         *  - `where` – `{object=}` - Criteria to match model instances
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * Data properties:
-         *
-         *  - `count` – `{number=}` -
-         */
+        // INTERNAL. Use User.submissions.count() instead.
         "prototype$__count__submissions": {
           url: urlBase + "/Users/:id/submissions/count",
           method: "GET"
@@ -1130,6 +930,12 @@ module.factory(
           method: "POST"
         },
 
+        // INTERNAL. Use Submission.user() instead.
+        "::get::Submission::user": {
+          url: urlBase + "/Submissions/:id/user",
+          method: "GET"
+        },
+
         /**
          * @ngdoc method
          * @name lbServices.User#getCurrent
@@ -1345,6 +1151,307 @@ module.factory(
     */
     R.modelName = "User";
 
+    /**
+     * @ngdoc object
+     * @name lbServices.User.submissions
+     * @header lbServices.User.submissions
+     * @object
+     * @description
+     *
+     * The object `User.submissions` groups methods
+     * manipulating `Submission` instances related to `User`.
+     *
+     * Call {@link lbServices.User#submissions User.submissions()}
+     * to query all related instances.
+     */
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.User#submissions
+         * @methodOf lbServices.User
+         *
+         * @description
+         *
+         * Queries submissions of User.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `filter` – `{object=}` -
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        R.submissions = function() {
+          var TargetResource = $injector.get("Submission");
+          var action = TargetResource["::get::User::submissions"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.User.submissions#count
+         * @methodOf lbServices.User.submissions
+         *
+         * @description
+         *
+         * Counts submissions of User.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` -
+         */
+        R.submissions.count = function() {
+          var TargetResource = $injector.get("Submission");
+          var action = TargetResource["::count::User::submissions"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.User.submissions#create
+         * @methodOf lbServices.User.submissions
+         *
+         * @description
+         *
+         * Creates a new instance in submissions of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        R.submissions.create = function() {
+          var TargetResource = $injector.get("Submission");
+          var action = TargetResource["::create::User::submissions"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.User.submissions#createMany
+         * @methodOf lbServices.User.submissions
+         *
+         * @description
+         *
+         * Creates a new instance in submissions of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        R.submissions.createMany = function() {
+          var TargetResource = $injector.get("Submission");
+          var action = TargetResource["::createMany::User::submissions"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.User.submissions#destroyAll
+         * @methodOf lbServices.User.submissions
+         *
+         * @description
+         *
+         * Deletes all submissions of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.submissions.destroyAll = function() {
+          var TargetResource = $injector.get("Submission");
+          var action = TargetResource["::delete::User::submissions"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.User.submissions#destroyById
+         * @methodOf lbServices.User.submissions
+         *
+         * @description
+         *
+         * Delete a related item by id for submissions.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `fk` – `{*}` - Foreign key for submissions
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.submissions.destroyById = function() {
+          var TargetResource = $injector.get("Submission");
+          var action = TargetResource["::destroyById::User::submissions"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.User.submissions#findById
+         * @methodOf lbServices.User.submissions
+         *
+         * @description
+         *
+         * Find a related item by id for submissions.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `fk` – `{*}` - Foreign key for submissions
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        R.submissions.findById = function() {
+          var TargetResource = $injector.get("Submission");
+          var action = TargetResource["::findById::User::submissions"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.User.submissions#updateById
+         * @methodOf lbServices.User.submissions
+         *
+         * @description
+         *
+         * Update a related item by id for submissions.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `fk` – `{*}` - Foreign key for submissions
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        R.submissions.updateById = function() {
+          var TargetResource = $injector.get("Submission");
+          var action = TargetResource["::updateById::User::submissions"];
+          return action.apply(R, arguments);
+        };
 
     return R;
   }]);
@@ -1374,36 +1481,7 @@ module.factory(
       { 'id': '@id' },
       {
 
-        /**
-         * @ngdoc method
-         * @name lbServices.Assignment#prototype$__findById__submissions
-         * @methodOf lbServices.Assignment
-         *
-         * @description
-         *
-         * Find a related item by id for submissions.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `fk` – `{*}` - Foreign key for submissions
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `Assignment` object.)
-         * </em>
-         */
+        // INTERNAL. Use Assignment.submissions.findById() instead.
         "prototype$__findById__submissions": {
           params: {
           'fk': '@fk'
@@ -1412,33 +1490,7 @@ module.factory(
           method: "GET"
         },
 
-        /**
-         * @ngdoc method
-         * @name lbServices.Assignment#prototype$__destroyById__submissions
-         * @methodOf lbServices.Assignment
-         *
-         * @description
-         *
-         * Delete a related item by id for submissions.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `fk` – `{*}` - Foreign key for submissions
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
+        // INTERNAL. Use Assignment.submissions.destroyById() instead.
         "prototype$__destroyById__submissions": {
           params: {
           'fk': '@fk'
@@ -1447,40 +1499,7 @@ module.factory(
           method: "DELETE"
         },
 
-        /**
-         * @ngdoc method
-         * @name lbServices.Assignment#prototype$__updateById__submissions
-         * @methodOf lbServices.Assignment
-         *
-         * @description
-         *
-         * Update a related item by id for submissions.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `fk` – `{*}` - Foreign key for submissions
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `Assignment` object.)
-         * </em>
-         */
+        // INTERNAL. Use Assignment.submissions.updateById() instead.
         "prototype$__updateById__submissions": {
           params: {
           'fk': '@fk'
@@ -1489,138 +1508,26 @@ module.factory(
           method: "PUT"
         },
 
-        /**
-         * @ngdoc method
-         * @name lbServices.Assignment#prototype$__get__submissions
-         * @methodOf lbServices.Assignment
-         *
-         * @description
-         *
-         * Queries submissions of Assignment.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `filter` – `{object=}` -
-         *
-         * @param {function(Array.<Object>,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Array.<Object>} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `Assignment` object.)
-         * </em>
-         */
+        // INTERNAL. Use Assignment.submissions() instead.
         "prototype$__get__submissions": {
           isArray: true,
           url: urlBase + "/Assignments/:id/submissions",
           method: "GET"
         },
 
-        /**
-         * @ngdoc method
-         * @name lbServices.Assignment#prototype$__create__submissions
-         * @methodOf lbServices.Assignment
-         *
-         * @description
-         *
-         * Creates a new instance in submissions of this model.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `Assignment` object.)
-         * </em>
-         */
+        // INTERNAL. Use Assignment.submissions.create() instead.
         "prototype$__create__submissions": {
           url: urlBase + "/Assignments/:id/submissions",
           method: "POST"
         },
 
-        /**
-         * @ngdoc method
-         * @name lbServices.Assignment#prototype$__delete__submissions
-         * @methodOf lbServices.Assignment
-         *
-         * @description
-         *
-         * Deletes all submissions of this model.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
+        // INTERNAL. Use Assignment.submissions.destroyAll() instead.
         "prototype$__delete__submissions": {
           url: urlBase + "/Assignments/:id/submissions",
           method: "DELETE"
         },
 
-        /**
-         * @ngdoc method
-         * @name lbServices.Assignment#prototype$__count__submissions
-         * @methodOf lbServices.Assignment
-         *
-         * @description
-         *
-         * Counts submissions of Assignment.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `where` – `{object=}` - Criteria to match model instances
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * Data properties:
-         *
-         *  - `count` – `{number=}` -
-         */
+        // INTERNAL. Use Assignment.submissions.count() instead.
         "prototype$__count__submissions": {
           url: urlBase + "/Assignments/:id/submissions/count",
           method: "GET"
@@ -2044,6 +1951,12 @@ module.factory(
           url: urlBase + "/Assignments/change-stream",
           method: "POST"
         },
+
+        // INTERNAL. Use Submission.assignment() instead.
+        "::get::Submission::assignment": {
+          url: urlBase + "/Submissions/:id/assignment",
+          method: "GET"
+        },
       }
     );
 
@@ -2180,6 +2093,1092 @@ module.factory(
     */
     R.modelName = "Assignment";
 
+    /**
+     * @ngdoc object
+     * @name lbServices.Assignment.submissions
+     * @header lbServices.Assignment.submissions
+     * @object
+     * @description
+     *
+     * The object `Assignment.submissions` groups methods
+     * manipulating `Submission` instances related to `Assignment`.
+     *
+     * Call {@link lbServices.Assignment#submissions Assignment.submissions()}
+     * to query all related instances.
+     */
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Assignment#submissions
+         * @methodOf lbServices.Assignment
+         *
+         * @description
+         *
+         * Queries submissions of Assignment.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `filter` – `{object=}` -
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        R.submissions = function() {
+          var TargetResource = $injector.get("Submission");
+          var action = TargetResource["::get::Assignment::submissions"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Assignment.submissions#count
+         * @methodOf lbServices.Assignment.submissions
+         *
+         * @description
+         *
+         * Counts submissions of Assignment.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` -
+         */
+        R.submissions.count = function() {
+          var TargetResource = $injector.get("Submission");
+          var action = TargetResource["::count::Assignment::submissions"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Assignment.submissions#create
+         * @methodOf lbServices.Assignment.submissions
+         *
+         * @description
+         *
+         * Creates a new instance in submissions of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        R.submissions.create = function() {
+          var TargetResource = $injector.get("Submission");
+          var action = TargetResource["::create::Assignment::submissions"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Assignment.submissions#createMany
+         * @methodOf lbServices.Assignment.submissions
+         *
+         * @description
+         *
+         * Creates a new instance in submissions of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        R.submissions.createMany = function() {
+          var TargetResource = $injector.get("Submission");
+          var action = TargetResource["::createMany::Assignment::submissions"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Assignment.submissions#destroyAll
+         * @methodOf lbServices.Assignment.submissions
+         *
+         * @description
+         *
+         * Deletes all submissions of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.submissions.destroyAll = function() {
+          var TargetResource = $injector.get("Submission");
+          var action = TargetResource["::delete::Assignment::submissions"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Assignment.submissions#destroyById
+         * @methodOf lbServices.Assignment.submissions
+         *
+         * @description
+         *
+         * Delete a related item by id for submissions.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for submissions
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.submissions.destroyById = function() {
+          var TargetResource = $injector.get("Submission");
+          var action = TargetResource["::destroyById::Assignment::submissions"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Assignment.submissions#findById
+         * @methodOf lbServices.Assignment.submissions
+         *
+         * @description
+         *
+         * Find a related item by id for submissions.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for submissions
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        R.submissions.findById = function() {
+          var TargetResource = $injector.get("Submission");
+          var action = TargetResource["::findById::Assignment::submissions"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Assignment.submissions#updateById
+         * @methodOf lbServices.Assignment.submissions
+         *
+         * @description
+         *
+         * Update a related item by id for submissions.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for submissions
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        R.submissions.updateById = function() {
+          var TargetResource = $injector.get("Submission");
+          var action = TargetResource["::updateById::Assignment::submissions"];
+          return action.apply(R, arguments);
+        };
+
+    return R;
+  }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.Submission
+ * @header lbServices.Submission
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `Submission` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+module.factory(
+  "Submission",
+  ['LoopBackResource', 'LoopBackAuth', '$injector', function(Resource, LoopBackAuth, $injector) {
+    var R = Resource(
+      urlBase + "/Submissions/:id",
+      { 'id': '@id' },
+      {
+
+        // INTERNAL. Use Submission.assignment() instead.
+        "prototype$__get__assignment": {
+          url: urlBase + "/Submissions/:id/assignment",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Submission.user() instead.
+        "prototype$__get__user": {
+          url: urlBase + "/Submissions/:id/user",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#create
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        "create": {
+          url: urlBase + "/Submissions",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#createMany
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        "createMany": {
+          isArray: true,
+          url: urlBase + "/Submissions",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#upsert
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Update an existing model instance or insert a new one into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        "upsert": {
+          url: urlBase + "/Submissions",
+          method: "PUT"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#exists
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Check whether a model instance exists in the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `exists` – `{boolean=}` -
+         */
+        "exists": {
+          url: urlBase + "/Submissions/:id/exists",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#findById
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Find a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         *  - `filter` – `{object=}` - Filter defining fields and include
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        "findById": {
+          url: urlBase + "/Submissions/:id",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#find
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Find all instances of the model matched by filter from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        "find": {
+          isArray: true,
+          url: urlBase + "/Submissions",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#findOne
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Find first instance of the model matched by filter from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        "findOne": {
+          url: urlBase + "/Submissions/findOne",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#updateAll
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Update instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        "updateAll": {
+          url: urlBase + "/Submissions/update",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#deleteById
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        "deleteById": {
+          url: urlBase + "/Submissions/:id",
+          method: "DELETE"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#count
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Count instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` -
+         */
+        "count": {
+          url: urlBase + "/Submissions/count",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#prototype$updateAttributes
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Update attributes for a model instance and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        "prototype$updateAttributes": {
+          url: urlBase + "/Submissions/:id",
+          method: "PUT"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#createChangeStream
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Create a change stream.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         *  - `options` – `{object=}` -
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `changes` – `{ReadableStream=}` -
+         */
+        "createChangeStream": {
+          url: urlBase + "/Submissions/change-stream",
+          method: "POST"
+        },
+
+        // INTERNAL. Use User.submissions.findById() instead.
+        "::findById::User::submissions": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Users/:id/submissions/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use User.submissions.destroyById() instead.
+        "::destroyById::User::submissions": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Users/:id/submissions/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use User.submissions.updateById() instead.
+        "::updateById::User::submissions": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Users/:id/submissions/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use User.submissions() instead.
+        "::get::User::submissions": {
+          isArray: true,
+          url: urlBase + "/Users/:id/submissions",
+          method: "GET"
+        },
+
+        // INTERNAL. Use User.submissions.create() instead.
+        "::create::User::submissions": {
+          url: urlBase + "/Users/:id/submissions",
+          method: "POST"
+        },
+
+        // INTERNAL. Use User.submissions.createMany() instead.
+        "::createMany::User::submissions": {
+          isArray: true,
+          url: urlBase + "/Users/:id/submissions",
+          method: "POST"
+        },
+
+        // INTERNAL. Use User.submissions.destroyAll() instead.
+        "::delete::User::submissions": {
+          url: urlBase + "/Users/:id/submissions",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use User.submissions.count() instead.
+        "::count::User::submissions": {
+          url: urlBase + "/Users/:id/submissions/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Assignment.submissions.findById() instead.
+        "::findById::Assignment::submissions": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Assignments/:id/submissions/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Assignment.submissions.destroyById() instead.
+        "::destroyById::Assignment::submissions": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Assignments/:id/submissions/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Assignment.submissions.updateById() instead.
+        "::updateById::Assignment::submissions": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Assignments/:id/submissions/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Assignment.submissions() instead.
+        "::get::Assignment::submissions": {
+          isArray: true,
+          url: urlBase + "/Assignments/:id/submissions",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Assignment.submissions.create() instead.
+        "::create::Assignment::submissions": {
+          url: urlBase + "/Assignments/:id/submissions",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Assignment.submissions.createMany() instead.
+        "::createMany::Assignment::submissions": {
+          isArray: true,
+          url: urlBase + "/Assignments/:id/submissions",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Assignment.submissions.destroyAll() instead.
+        "::delete::Assignment::submissions": {
+          url: urlBase + "/Assignments/:id/submissions",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Assignment.submissions.count() instead.
+        "::count::Assignment::submissions": {
+          url: urlBase + "/Assignments/:id/submissions/count",
+          method: "GET"
+        },
+      }
+    );
+
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#updateOrCreate
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Update an existing model instance or insert a new one into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Submission` object.)
+         * </em>
+         */
+        R["updateOrCreate"] = R["upsert"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#update
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Update instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R["update"] = R["updateAll"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#destroyById
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R["destroyById"] = R["deleteById"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#removeById
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R["removeById"] = R["deleteById"];
+
+
+    /**
+    * @ngdoc property
+    * @name lbServices.Submission#modelName
+    * @propertyOf lbServices.Submission
+    * @description
+    * The name of the model represented by this $resource,
+    * i.e. `Submission`.
+    */
+    R.modelName = "Submission";
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#assignment
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Fetches belongsTo relation assignment.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `refresh` – `{boolean=}` -
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Assignment` object.)
+         * </em>
+         */
+        R.assignment = function() {
+          var TargetResource = $injector.get("Assignment");
+          var action = TargetResource["::get::Submission::assignment"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Submission#user
+         * @methodOf lbServices.Submission
+         *
+         * @description
+         *
+         * Fetches belongsTo relation user.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `refresh` – `{boolean=}` -
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `User` object.)
+         * </em>
+         */
+        R.user = function() {
+          var TargetResource = $injector.get("User");
+          var action = TargetResource["::get::Submission::user"];
+          return action.apply(R, arguments);
+        };
 
     return R;
   }]);
