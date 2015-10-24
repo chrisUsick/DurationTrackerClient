@@ -1,13 +1,22 @@
 export function routerConfig ($stateProvider, $urlRouterProvider) {
   'ngInject';
   $stateProvider
+    .state('base', {
+      abstract:true,
+      template:'<ui-view/>',
+      resolve: {
+        loadUser: (User) => User.getCurrent().$promise
+      }
+    })
     .state('home', {
       url: '/',
+      parent:'base',
       templateUrl: 'app/main/main.html',
       controller: 'MainController',
       controllerAs: 'main'
     })
     .state('assignment', {
+      parent:'base',
       url:'/assignment/:id',
       templateUrl: 'app/assignment/assignment.html',
       controller: 'AssignmentController',
@@ -16,6 +25,7 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
         id: {array:false}
       }
     }).state('submit', {
+      parent:'base',
       url:'/submit/?asgnId',
       templateUrl: 'app/submit/submit.html',
       controller: 'SubmitController',
@@ -27,11 +37,7 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
         authenticate:true
       },
       resolve: {
-        user: (User) => {
-          if (User.isAuthenticated()) {
-            return User.getCurrent({include:'submissions'});
-          }
-        }
+        
       }
     }).state('login', {
       url:'/login',

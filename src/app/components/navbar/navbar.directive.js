@@ -16,10 +16,20 @@ export function NavbarDirective() {
 }
 
 class NavbarController {
-  constructor (moment) {
+  constructor ( User, $state) {
     'ngInject';
+    this.User = User;
+    this.$state = $state;
+    this.authenticated = User.isAuthenticated();
+    // User.getCurrent().$promise.then(() => {
+    // });
+    let user = User.getCachedCurrent();
+    this.email = user && user.email;
+  }
 
-    // "this.creation" is avaible by directive option "bindToController: true"
-    this.relativeDate = moment(this.creationDate).fromNow();
+  logout() {
+    this.User.logout();
+    this.email = null;
+    this.$state.go('home');
   }
 }

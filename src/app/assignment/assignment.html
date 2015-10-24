@@ -12,5 +12,17 @@
         Expected Duration: {{c.asgn.expectedDuration}}
       </p>
     </div>
+    <div class="col-md-4">
+      <h2>Statistics</h2>
+      <p>
+        Average Duration: {{c.asgn.averageDuration}} hours.
+      </p>
+      <p>
+         On average, {{c.asgn.name}} has taken students
+        <strong>{{c.timeDiffAbs|number:2}} </strong>hour{{c.timeDiffAbs != 1 ? 's' : ''}}
+        <strong>{{(c.timeDiff > 0) ? 'longer' : 'shorter'}}</strong> than expected
+        to complete.
+      </p>
+    </div>
   </div>
 </div>

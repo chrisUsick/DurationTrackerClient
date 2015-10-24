@@ -11,6 +11,8 @@ export class LoginController {
       let token = this.User.login({include:{user:'submissions'}},this.creds);
       let self = this;
       token.$promise
+        // doing this because User.login isn't setting cached current user
+        .then(() => this.User.getCurrent().$promise)
         .then((/*user*/) => {
           self.$state.go('home');
         })

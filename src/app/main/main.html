@@ -13,11 +13,14 @@
   <div class="row">
 
     <div class="col-sm-6 col-md-4" ng-repeat="asgn in main.assignments">
-      <div class="thumbnail">
+      <div class="thumbnail" ng-style="asgn.style">
         <!-- <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}"> -->
         <div class="caption">
           <h3><a href ui-sref="assignment({id:asgn.id})">{{ asgn.name }}</a></h3>
           <p>Expected duration: {{ asgn.expectedDuration }} hours</p>
+          <p>
+            Average Duration: {{asgn.averageDuration}} hours</p>
+          </p>
         </div>
       </div>
     </div>
